@@ -52,10 +52,9 @@
                     {{$fixture->date}}
                 </td>
                 <td class="p-2">
-                    {{$fixture->league_name}}
+                    {{$fixture->league_country}}
                 </td>
                 <td class="p-2">
-
                      {{$fixture->status}}
                 </td>
                 <td class="p-2">

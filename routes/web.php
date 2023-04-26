@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FixtureController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 
@@ -14,8 +15,8 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/', [TestController::class,'fixtures']);
-Route::get('/store', [TestController::class,'store'])->name('store');
+Route::get('/', [FixtureController::class,'fixtures']);
+Route::get('/store', [FixtureController::class,'store'])->name('store');
 Route::get('/rounds', [TestController::class,'rounds']);
 Route::get('/table', [TestController::class,'table']);
 Route::get('/show/{id}', [TestController::class,'show'])->name('show');

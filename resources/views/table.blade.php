@@ -45,37 +45,37 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($response as $fixture)
+        @foreach($events as $fixture)
         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                {{$fixture['fixture']['date']}}
+                {{$fixture->date}}
             </th>
             <td class="px-6 py-4">
-                {{$fixture['league']['country']}}
+                {{$fixture->league_name}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['league']['name']}}
+                {{$fixture->league_country}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['fixture']['status']['long']}}
+                {{$fixture->status}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['teams']['home']['name']}}
+                {{$fixture->home_team_name}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['score']['fulltime']['home']}}
+                {{$fixture->home_team_goals}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['score']['fulltime']['away']}}
+                {{$fixture->away_team_goals}}
             </td>
             <td class="px-6 py-4">
-                {{$fixture['teams']['away']['name']}}
+                {{$fixture->away_team_name}}
             </td>
 {{--            <td class="px-6 py-4">--}}
 {{--                <a href="{{route('show', $fixture['fixture']['id'])}}">show</a>--}}
 {{--            </td>--}}
             <td class="px-6 py-4">
-                <a href="{{route('predict', $fixture['fixture']['id'])}}">show</a>
+                <a href="{{route('predict', $fixture->fx_id)}}">show</a>
             </td>
 
         </tr>
