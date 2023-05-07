@@ -13,10 +13,10 @@ class FixtureController extends Controller
     public function fixtures()
     {
         $date = date("Y-m-d");
-//        $events = DB::table('fixtures')->orderBy('league_country')->get();
+        $events = DB::table('fixtures')->orderBy('league_country')->orderBy('league_name')->get();
 
-        $events= DB::table('fixtures')
-            ->get();
+//        $events= DB::table('fixtures')
+//            ->get();
 
         $epl = DB::table('fixtures')->where('league_id', '39')->get();
         $la_liga = DB::table('fixtures')->where('league_id', '140')->get();
